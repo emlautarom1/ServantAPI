@@ -2,7 +2,7 @@
 
 ## Build and run
 
-**Important:** Replace `auth_key` and `auth_email` for your own credentials.
+**Important:** Replace `auth_key` and `auth_email` for your own cloudflare credentials.
 
 ```bash
     ~ stack setup
