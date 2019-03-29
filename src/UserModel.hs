@@ -35,9 +35,6 @@ data User = User
   } deriving (Show, Generic)
 
 instance FromJSON UserResponse
-
 instance FromJSON User
-
 instance ToJSON UserResponse
-
 instance ToJSON User

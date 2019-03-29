@@ -18,12 +18,15 @@ import           UserModel
 
 -- Private keys:
 authEmail = "emlautarom1@gmail.com"
-
 authKey = "<INSERT-YOUR-PRIVATE-KEY>"
-
 -- End of private keys.
+
 type API
-   = "user" :> "subcriptions" :> Header "X-Auth-Email" String :> Header "X-Auth-Key" String :> Get '[ JSON] SubscriptionResponse
+   = "user"
+    :> "subcriptions"
+     :> Header "X-Auth-Email" String
+      :> Header "X-Auth-Key" String
+       :> Get '[ JSON] SubscriptionResponse
 
 api :: Proxy API
 api = Proxy
@@ -35,7 +38,11 @@ querySubscriptions :: ClientM SubscriptionResponse
 querySubscriptions = subscriptions (Just authEmail) (Just authKey)
 
 type API'
-   = "user" :> Header "X-Auth-Email" String :> Header "X-Auth-Key" String :> ReqBody '[ JSON] UserPayload :> Patch '[ JSON] UserResponse
+   = "user"
+    :> Header "X-Auth-Email" String
+     :> Header "X-Auth-Key" String
+      :> ReqBody '[ JSON] UserPayload
+       :> Patch '[ JSON] UserResponse
 
 api' :: Proxy API'
 api' = Proxy

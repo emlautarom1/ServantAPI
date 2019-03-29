@@ -12,19 +12,12 @@ import           RatePlan
 import           Zone
 
 instance FromJSON SubResponse
-
 instance FromJSON Res
-
 instance FromJSON App
-
 instance FromJSON ResultInfo
-
 instance FromJSON Product
-
 instance FromJSON RatePlan
-
 instance FromJSON Zone
-
 instance FromJSON ComponentValues
 
 data SubResponse = SubResponse
