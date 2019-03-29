@@ -1,0 +1,53 @@
+name:                ServantAPI
+version:             0.1.0.0
+github:              "lautaroem1/ServantAPI"
+license:             BSD3
+author:              "Lautaro Emanuel"
+maintainer:          "emlautarom1@gmail.com"
+copyright:           "Lautaro Emanuel"
+
+extra-source-files:
+- README.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/lautaroem1/ServantAPI#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- aeson
+- servant
+- servant-client
+- text
+- http-client
+- http-client-tls
+
+library:
+  source-dirs: src
+
+executables:
+  ServantAPI-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ServantAPI
+
+tests:
+  ServantAPI-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ServantAPI
