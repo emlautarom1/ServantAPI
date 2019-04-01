@@ -36,5 +36,3 @@ data User = User
 
 instance FromJSON UserResponse
 instance FromJSON User
-instance ToJSON UserResponse
-instance ToJSON User
