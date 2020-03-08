@@ -1,17 +1,18 @@
-{-# LANGUAGE DeriveGeneric #-}
-
 module RatePlan
-  ( RatePlan
-  ) where
+  ( RatePlan,
+  )
+where
 
-import           GHC.Generics
+import GHC.Generics
 
-data RatePlan = RatePlan
-  { id                 :: String
-  , public_name        :: String
-  , currency           :: String
-  , scope              :: String
-  , externally_managed :: Bool
-  , sets               :: [String]
-  , is_contract        :: Bool
-  } deriving (Show, Generic)
+data RatePlan
+  = RatePlan
+      { id :: String,
+        public_name :: String,
+        currency :: String,
+        scope :: String,
+        externally_managed :: Bool,
+        sets :: [String],
+        is_contract :: Bool
+      }
+  deriving (Show, Generic)

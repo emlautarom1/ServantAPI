@@ -1,16 +1,17 @@
-{-# LANGUAGE DeriveGeneric #-}
-
 module Zone
-  ( Zone
-  , getName
-  ) where
+  ( Zone,
+    getName,
+  )
+where
 
-import           GHC.Generics
+import GHC.Generics
 
-data Zone = Zone
-  { id   :: String
-  , name :: String
-  } deriving (Show, Generic)
+data Zone
+  = Zone
+      { id :: String,
+        name :: String
+      }
+  deriving (Show, Generic)
 
 getName :: Zone -> String
 getName = name
